@@ -40,16 +40,14 @@ BizFlow is a business workflow management platform with a Laravel backend and an
    BACKEND_EXTERNAL_PORT=8000          # Port exposed to host for backend API (change if 8000 is busy)
    FRONTEND_EXTERNAL_PORT=3003         # Port exposed to host for admin frontend (change if 3000 is busy)
    APP_NAME=Laravel                    # Application name (default: Laravel)
-   APP_KEY=base64:BpjTgF/OUlS0Mc/ZYuodZwkLrapLEoh557TQx+vywZM= # Laravel app key (keep this secret)
+
+   APP_KEY=base64:superscretkey = # Unique key for the application
+
    APP_URL=http://localhost:8000       # Public URL for backend API (update if using static IP or domain)
-   PHP_CLI_SERVER_WORKERS=4            # Number of PHP server workers
-   BCRYPT_ROUNDS=12                    # Bcrypt hashing rounds (security setting)
-   LOG_CHANNEL=stack                   # Logging channel
-   LOG_STACK=single                    # Log stack driver
-   LOG_DEPRECATIONS_CHANNEL=null       # Channel for deprecation logs
-   LOG_LEVEL=debug                     # Log level (debug, info, warning, etc.)
+
+
    DB_CONNECTION=sqlite                # Database connection type (default: sqlite)
-   CACHE_STORE=database                # Cache store driver
+
    ADMIN_USER_EMAIL="mail@mail.com"      # Default admin user email
    ADMIN_USER_PASSWORD="password"         # Default admin user password
    ADMIN_USER_NAME="Test Admin"           # Default admin user name
