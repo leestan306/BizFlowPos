@@ -20,7 +20,7 @@ networks:
 
 services:
   # ===========================================
-  # BACKEND SERVICE (Laravel API)
+  # BACKEND SERVICE (server API)
   # ===========================================
   backend:
     # Use the pre-built image from Docker Hub
@@ -36,16 +36,7 @@ services:
     env_file:
       - .env
 
-    # Additional environment variables specific to Docker deployment
-    environment:
-      # Ensure Laravel uses SQLite database
-      - DB_CONNECTION=sqlite
-      # Set the SQLite database path to the mounted volume
-      - DB_DATABASE=/var/www/html/storage/database/database.sqlite
-      # Override APP_URL to use the container network
-      - APP_URL=http://backend:8000
-
-    # Port mapping - expose Laravel dev server
+    # Port mapping - expose server dev server
     ports:
       - "8000:8000"
 
@@ -75,14 +66,14 @@ services:
         touch /var/www/html/storage/database/database.sqlite &&
         # Ensure proper permissions
         chmod 664 /var/www/html/storage/database/database.sqlite &&
-        # Run Laravel optimizations
+        # Run server optimizations
         php artisan config:cache &&
         php artisan route:cache &&
         # Run database migrations
         php artisan migrate --force &&
         # Seed the database with initial data
         php artisan db:seed --force &&
-        # Start Laravel development server
+        # Start server development server
         php artisan serve --host=0.0.0.0 --port=8000
       "
 
@@ -160,13 +151,8 @@ services:
 #
 #    Create .env file with ALL environment variables:
 #
-#    # === BACKEND CONFIGURATION (Laravel) ===
-#    APP_NAME=Laravel
+#    # === BACKEND CONFIGURATION (server) ===
 
-#    APP_KEY=base64:BpjTgF/OUlS0Mc/ZYuodZwkLrapLEoh557TQx+vywZM=
-
-#    APP_URL=http://localhost:8000
-#    DB_CONNECTION=sqlite
 #
 #
 #

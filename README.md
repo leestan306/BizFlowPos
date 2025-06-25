@@ -37,17 +37,6 @@ BizFlow is a business workflow management platform with a Laravel backend and an
 2. **Edit the `.env` file** to set your desired configuration. Below are the required variables (with comments):
 
    ```env
-   BACKEND_EXTERNAL_PORT=8000          # Port exposed to host for backend API (change if 8000 is busy)
-   FRONTEND_EXTERNAL_PORT=3003         # Port exposed to host for admin frontend (change if 3000 is busy)
-   APP_NAME=Laravel                    # Application name (default: Laravel)
-
-   APP_KEY=base64:superscretkey = # Unique key for the application
-
-   APP_URL=http://localhost:8000       # Public URL for backend API (update if using static IP or domain)
-
-
-   DB_CONNECTION=sqlite                # Database connection type (default: sqlite)
-
    ADMIN_USER_EMAIL="mail@mail.com"      # Default admin user email
    ADMIN_USER_PASSWORD="password"         # Default admin user password
    ADMIN_USER_NAME="Test Admin"           # Default admin user name
@@ -133,7 +122,7 @@ To access the server from an external device (e.g., on your LAN):
 
 BizFlow POS Client is a desktop application (available for Windows, Mac, and Linux) that connects to your BizFlow server.
 
-- **Download BizFlow POS Client:** [https://bizflow.leestan.dev](https://bizflow.leestan.dev)
+- **Download BizFlow POS Client:** [https://bizflow.co.ke](https://bizflow.co.ke)
 - **Supported platforms:** Windows, macOS, Linux
 
 **When prompted for the server URL in the POS client:**
