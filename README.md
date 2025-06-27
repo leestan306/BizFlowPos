@@ -41,6 +41,8 @@ BizFlow is a business workflow management platform with a Laravel backend and an
    ADMIN_USER_PASSWORD="password"         # Default admin user password
    ADMIN_USER_NAME="Test Admin"           # Default admin user name
    ADMIN_USER_CODE="Test Admin"           # Default admin user code
+   ADMIN_USER_NUMERIC_SECRET_CODE="44444444" # For POS Auth
+   
    LICENSE_TOKEN=                       # License token (see below to obtain)
    ```
 
